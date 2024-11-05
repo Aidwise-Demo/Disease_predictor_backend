@@ -3,7 +3,7 @@ import time
 
 def remove_old_files():
     # Define the folders to clean up
-    folders = ['uploads', 'uploadscovid', 'input']
+    folders = ['uploads', 'uploadsCovid', 'input']
 
     # Get the current time
     now = time.time()
