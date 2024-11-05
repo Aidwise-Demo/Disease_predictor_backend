@@ -14,7 +14,7 @@ IMAGEDIR = "images/"
 # Allow all origins for simplicity. You can restrict it to your specific frontend domain.
 origins = [
     # "http://localhost:5500",
-    "https://studio-main-zeta.vercel.app/covid",]
+    "https://studio-main-zeta.vercel.app",]
 
 app.add_middleware(
     CORSMiddleware,
