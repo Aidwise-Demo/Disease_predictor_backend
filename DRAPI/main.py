@@ -18,7 +18,9 @@ app = FastAPI()
 # Allow all origins for demonstration purposes
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Replace with your client's URL
+    # allow_origins=["*"],
+    allow_origins=["https://studio-main-zeta.vercel.app"],  # Replace with your client's URL
+    # Replace with your client's URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
