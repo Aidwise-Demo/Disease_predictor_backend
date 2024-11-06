@@ -12,6 +12,10 @@ from HeartAPI import model as HeartModel
 from pydantic import BaseModel
 import base64
 from removing_files import remove_old_files
+from fastapi import WebSocket
+import asyncio
+ 
+ 
 
 # Call the function to remove old files
 remove_old_files()
@@ -189,7 +193,21 @@ async def upload(file: UploadFile = File(...)):
 
         output_file = ParserScript.process_837_file(save_location)
 
+
         return FileResponse(f"{output_file}", filename=output_file, media_type='application/octet-stream')
     except Exception as e:
         # Handle exceptions as needed
         print(e)
+        
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            # Simulate sending live data every 5 seconds
+            await websocket.send_text("Live update: Hello, this message is sent every 5 seconds!")
+            await asyncio.sleep(5)  # Wait for 5 seconds
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        await websocket.close()
