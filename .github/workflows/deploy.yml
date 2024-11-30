@@ -6,7 +6,7 @@ on:
       - main  # Deploy only when code is pushed to the main branch
 
 jobs:
-  Deploy to VPS:
+  Deploy_to_VPS:
     runs-on: ubuntu-latest
     env:
       VPS_DIRECTORY_AIDWISE_DEMO: ${{ secrets.VPS_DIRECTORY_AIDWISE_DEMO }}
