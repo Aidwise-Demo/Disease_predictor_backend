@@ -1,0 +1,11 @@
+# Python files
+__pycache__/
+test.ipynb
+try.py
+main_copy.py
+
+# Environment files
+.env
+
+# Documentation
+Readme.md
