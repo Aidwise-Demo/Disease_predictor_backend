@@ -1,11 +1,12 @@
 # Python files
-__pycache__/
+__pycache__
 test.ipynb
 try.py
 main_copy.py
 
 # Environment files
 .env
+.venv
 
 # Documentation
 Readme.md
