@@ -40,7 +40,7 @@ Path(UPLOAD_FOLDERCovid).mkdir(parents=True, exist_ok=True)
 
 @app.get("/", response_class=JSONResponse)
 async def read_form():
-    return {"message": "Server is running"}
+    return {"message": "Disease Predictor Server is running"}
 
 
 @app.post("/DRuploadfile")
